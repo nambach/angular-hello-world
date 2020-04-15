@@ -1,0 +1,70 @@
+<form [formGroup]="form" (ngSubmit)="login()">
+  <div class="form-group">
+    <label for="username">Username</label>
+    <input
+      formControlName="username"
+      id="username"
+      type="text"
+      class="form-control"
+    />
+    <div *ngIf="username.pending">Checking username...</div>
+    <div
+      *ngIf="username.touched && username.invalid"
+      class="alert alert-danger"
+    >
+      <div *ngIf="username.errors.required">
+        Username is required.
+      </div>
+      <div *ngIf="username.errors.minlength">
+        Username must be at least
+        {{ username.errors.minlength.requiredLength }} characters.
+      </div>
+      <div *ngIf="username.errors.nospace">
+        Username cannot contains space.
+      </div>
+      <div *ngIf="username.errors.unique">
+        Username already exists.
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input
+      formControlName="password"
+      id="password"
+      type="text"
+      class="form-control"
+    />
+  </div>
+
+  <div formGroupName="dob">
+    <div class="form-group">
+      <label for="birthDay">Day</label>
+      <input
+        formControlName="birthDay"
+        id="birthDay"
+        type="text"
+        class="form-control"
+      />
+    </div>
+    <div class="form-group">
+      <label for="birthMonth">Month</label>
+      <input
+        formControlName="birthMonth"
+        id="birthMonth"
+        type="text"
+        class="form-control"
+      />
+    </div>
+    <div class="form-group">
+      <label for="birthYear">Year</label>
+      <input
+        formControlName="birthYear"
+        id="birthYear"
+        type="text"
+        class="form-control"
+      />
+    </div>
+  </div>
+  <button class="btn btn-primary" type="submit">Sign Up</button>
+</form>

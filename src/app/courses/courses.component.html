@@ -1,0 +1,27 @@
+<!-- <h1>{{ title }}</h1>
+<div [style.backgroundColor]="false ? 'green' : 'red'" (click)="divHandler()">
+  <ul>
+    <li *ngFor="let course of courses">
+      {{ course.name }}
+    </li>
+  </ul>
+  <input
+    [value]="email"
+    (keyup.enter)="email = $event.target.value; handleInputEnter(email)"
+  />
+  <br />
+  <input [(ngModel)]="email" (keyup.enter)="handleEmail()" />
+  <br />
+  <button
+    class="btn btn-primary"
+    [class.active]="false"
+    (click)="buttonHandler($event)"
+  >
+    Save
+  </button>
+</div> -->
+<star-icon (change)="handleChange()"></star-icon>
+<btn-like
+  [isSelected]="tweet.isSelected"
+  [likeCounts]="tweet.likeCounts"
+></btn-like>

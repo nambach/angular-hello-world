@@ -1,0 +1,8 @@
+<button
+  class="btn"
+  [class.btn-light]="!isSelected"
+  [class.btn-dark]="isSelected"
+  (click)="handleClick()"
+>
+  {{ likeCounts }}
+</button>
