@@ -12,6 +12,7 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
 import { FormArrayComponent } from './form-array/form-array.component';
 import { FormBuilderComponent } from './form-builder/form-builder.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FormBuilderComponent } from './form-builder/form-builder.component';
     ContactFormComponent,
     SignupFormComponent,
     FormArrayComponent,
-    FormBuilderComponent
+    FormBuilderComponent,
+    ChangePasswordComponent
   ],
   imports: [
     BrowserModule,
