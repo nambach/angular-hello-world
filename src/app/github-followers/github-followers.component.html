@@ -10,7 +10,12 @@
     </div>
     <div style="float: left;">
       <h3>{{ follower.login }}</h3>
-      <a [href]="follower.html_url" [target]="'_blank'"> {{ follower.html_url }} </a>
+      <a
+        [routerLink]="['/followers', follower.login]"
+        [queryParams]="{ id: follower.id }"
+      >
+        {{ follower.html_url }}
+      </a>
     </div>
   </div>
 </div>
